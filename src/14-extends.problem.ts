@@ -5,20 +5,21 @@ import { Equal, Expect } from "./helpers/type-utils";
  * interfaces. Can you find a way to refactor this to
  * make it more DRY?
  */
-
-interface User {
+interface Id {
   id: string;
+}
+interface User extends Id {
   firstName: string;
   lastName: string;
 }
 
-interface Post {
+interface Post extends Id {
   id: string;
   title: string;
   body: string;
 }
 
-interface Comment {
+interface Comment extends Id {
   id: string;
   comment: string;
 }
